@@ -1,0 +1,16 @@
+mqtt:
+  host: domoticz.lan
+  port: 1883
+  debug: true
+  username:
+  password: 
+  
+rflink:
+  - topic: /ESP00/msg
+    cmd: /ESP00/cmd
+    host: localhost
+    port: 63333
+  - topic: /ESP01/msg
+    cmd: /ESP01/cmd
+    host: localhost
+    port: 63334
