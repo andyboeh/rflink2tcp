@@ -1,0 +1,14 @@
+post_install() {
+  # Create user
+  systemd-sysusers rflink2tcp.conf
+  chown -R rflink2tcp:rflink2tcp /opt/rflink2tcp
+}
+
+post_upgrade() {
+  systemctl daemon-reload
+}
+
+post_remove() {
+  systemctl stop rflink2tcp.service
+  true
+}
