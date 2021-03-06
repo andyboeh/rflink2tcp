@@ -1,5 +1,5 @@
 pkgname=rflink2tcp-git
-pkgver=0.1
+pkgver=r2.54491de
 pkgrel=1
 pkgdesc="Simple RFLink-ESP MQTT to TCP bridge"
 arch=('any')
@@ -28,7 +28,6 @@ package() {
   cd "${pkgname}"
   install -d "${pkgdir}/opt/rflink2tcp"
   cp rflink2tcp.py "${pkgdir}/opt/rflink2tcp/rflink2tcp.py"
-  cp -R pyezr "${pkgdir}/opt/rflink2tcp/"
   install -Dm644 "${srcdir}/rflink2tcp.service" "${pkgdir}/usr/lib/systemd/system/rflink2tcp.service"
   install -Dm644 "${srcdir}/rflink2tcp.sysusers" "${pkgdir}/usr/lib/sysusers.d/rflink2tcp.conf"
   install -Dm644 rflink2tcp.yaml "${pkgdir}/opt/rflink2tcp/rflink2tcp.yaml"
